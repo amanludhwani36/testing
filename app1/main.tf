@@ -6,7 +6,7 @@
 # }
 
 resource "google_compute_instance" "default" {
-  name         = "codepipes-testing"
+  name         = "codepipes-instance"
   machine_type = "n1-standard-1"
   zone         = "${var.region}-a"
 
@@ -30,7 +30,7 @@ resource "google_compute_instance" "default" {
   }
 
   metadata = {
-    owner = "varun"
+    owner = "aman.ludhwani"
   }
 
   metadata_startup_script = "apt-get update && apt-get upgrade -y && apt-get install nginx -y"
@@ -62,7 +62,7 @@ resource "google_compute_instance" "default-1" {
   }
 
   metadata = {
-    owner = "varun"
+    owner = "aman.ludhwani"
   }
 
   metadata_startup_script = "apt-get update && apt-get upgrade -y && apt-get install nginx -y"
